@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "9d55fad9-1a14-40c7-85c5-54bc2c3d7186",
+		"name": "ultra-coding-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Europa Universalis IV\",\n    \"price\": 89.99,\n    \"publisher\": \"Paradox Interactive\",\n    \"tags\": [\"strategy\", \"economy\", \"simulation\"],\n    \"releaseDate\": \"2013-08-13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get many",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/625da4afd629cd971a611906",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"625da4afd629cd971a611906"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"625d52bbf679195d4f61664b\",\n    \"title\": \"Lalala\",\n    \"price\": 89,\n    \"publisher\": \"Paradox Interactive\",\n    \"tags\": [\"strategy\", \"economy\", \"simulation\"],\n    \"releaseDate\": \"2013-08-13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/625d3e8bc96868ccc06e3709",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"625d3e8bc96868ccc06e3709"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Publisher",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/get-publisher/Europa+Universalis+iV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-publisher",
+						"Europa+Universalis+iV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove or discount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eqIu4PrX8FkxflTLLZc04Box3L6alNYKf4aITNHX9xEs6318UdSbCRQd68KDxszS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/cleanup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cleanup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

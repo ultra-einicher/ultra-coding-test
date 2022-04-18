@@ -1,0 +1,18 @@
+.git
+.vscode
+coverage
+*.md
+.prettierrc
+.package-lock.json
+
+# Secrets
+.env
+
+# Node Files
+node_modules
+npm-debug.log
+npm-debug.log.*
+
+# Source files
+src
+test

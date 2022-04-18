@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+    mongodb:
+      image: mongo:latest
+      ports:
+        - 27017:27017
+      volumes:
+        - /data/mongodb:/data/mongodb
+      networks:
+        - nesjs-network
+    dev:
+        container_name: ultra_coding_test_dev
+        image: ultra-coding-test-dev:1.0.0
+        build:
+            context: .
+            target: development
+            dockerfile: ./Dockerfile
+        command: npm run start:dev
+        ports:
+            - 3000:3000
+        networks:
+            - nesjs-network
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        restart: unless-stopped
+        depends_on: 
+          - mongodb
+    prod:
+        container_name: ultra_coding_test_prod
+        image: ultra-coding-test-prod:1.0.0
+        build:
+            context: .
+            target: production
+            dockerfile: ./Dockerfile
+        command: npm run start:prod
+        ports:
+            - 3000:3000
+        networks:
+            - nesjs-network
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        restart: unless-stopped
+        depends_on: 
+          - mongodb
+
+networks:
+  nesjs-network:
+    driver: bridge
