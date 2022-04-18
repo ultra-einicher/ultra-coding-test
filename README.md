@@ -8,7 +8,7 @@ docker composer up dev
 
 - See `ultra-coding-test.postman_collection.json` for Postman test requests
 
-# Endpoints
+# endpoints
 
 ```
 POST    /                     Create game
