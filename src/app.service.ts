@@ -19,7 +19,6 @@ export class AppService {
 			createGameDto.publisher,
 		);
 		delete createGameDto._id;
-		console.log(createGameDto);
 		const game = new this.gameModel(createGameDto);
 		return game.save();
 	}
